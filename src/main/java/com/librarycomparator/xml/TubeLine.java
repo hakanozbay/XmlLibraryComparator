@@ -8,18 +8,25 @@ import org.simpleframework.xml.Root;
 
 @Root
 public class TubeLine {
+
+	@Attribute
+	private String id;
+	@Attribute
+	private String name;
+
+	@ElementList(inline = true)
+	private List<Station> stations;
+
 	public String getId() {
 		return id;
 	}
+
 	public String getName() {
 		return name;
 	}
-	@Attribute
-	public String id;
-	@Attribute
-	public String name;
-	
-	@ElementList
-	public List<Station> stations;
-	
+
+	public List<Station> getStations() {
+		return stations;
+	}
+
 }
