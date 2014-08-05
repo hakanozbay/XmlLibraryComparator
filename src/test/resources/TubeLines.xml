@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<lines>
-    <line id="12" name="Waterloo and City">
+<tubelines>
+    <lines>
+    <tubeline id="12" name="Waterloo and City">
+        <stations>
         <station id="252" name="Waterloo"/>
         <station id="12" name="Bank"/>
-    </line>
-</lines>
+        </stations>
+    </tubeline>
+    </lines>
+</tubelines>
