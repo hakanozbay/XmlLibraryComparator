@@ -39,24 +39,34 @@ public class TubeLinesParserTests {
 
 	@Test
 	public void GetWaterlooAndCityLineTest() {
-		TubeLine tubeLine = _tubeLines.getTubeLines().get(0);
-
-		assertTrue(tubeLine.getId().equalsIgnoreCase("12"));
-		assertTrue(tubeLine.getName().equalsIgnoreCase("waterloo and city"));
-		assertFalse(tubeLine.getStations().isEmpty());
+		TubeLine waterlooAndCityLine = _tubeLines.getTubeLines().get(0);
+		assertNotNull(waterlooAndCityLine);
+		assertTrue(waterlooAndCityLine.getId().equalsIgnoreCase("12"));
+		assertTrue(waterlooAndCityLine.getName().equals("Waterloo and City"));
+		assertFalse(waterlooAndCityLine.getStations().isEmpty());
 
 	}
 
 	@Test
 	public void GetWaterlooAndCityLineStationsTest() {
-		TubeLine tubeLine = _tubeLines.getTubeLines().get(0);
-
-		List<Station> stations = tubeLine.getStations();
+		
+		TubeLine waterlooAndCityLine = GetTubeLine("Waterloo and City", _tubeLines.getTubeLines());
+		List<Station> stations = waterlooAndCityLine.getStations();
 		assertTrue(stations.get(0).getId().equalsIgnoreCase("252"));
-		assertTrue(stations.get(0).getName().equalsIgnoreCase("waterloo"));
+		assertTrue(stations.get(0).getName().equals("Waterloo"));
 
-		assertTrue(stations.get(1).getId().equalsIgnoreCase("12"));
-		assertTrue(stations.get(1).getName().equalsIgnoreCase("bank"));
+		assertTrue(stations.get(1).getId().equals("12"));
+		assertTrue(stations.get(1).getName().equals("Bank"));
+	}
+	
+	private TubeLine GetTubeLine(String tubeLineName, List<TubeLine> tubeLines){
+		
+		for(TubeLine tubeLine : tubeLines){
+			if(tubeLine.getName().equals(tubeLineName))
+				return tubeLine;
+		}
+		
+		return null;
 	}
 
 }
