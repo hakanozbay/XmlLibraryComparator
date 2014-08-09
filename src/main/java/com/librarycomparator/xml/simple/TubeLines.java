@@ -1,4 +1,4 @@
-package com.librarycomparator.xml;
+package com.librarycomparator.xml.simple;
 
 import java.util.List;
 

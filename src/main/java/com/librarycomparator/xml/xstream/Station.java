@@ -1,12 +1,12 @@
-package com.librarycomparator.xml;
+package com.librarycomparator.xml.xstream;
 
-import org.simpleframework.xml.Attribute;
+import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
 public class Station {
 
-	@Attribute
+	@XStreamAsAttribute
 	private String id;
-	@Attribute
+	@XStreamAsAttribute
 	private String name;
 
 	public String getId() {
