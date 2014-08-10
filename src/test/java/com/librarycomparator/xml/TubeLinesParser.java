@@ -11,10 +11,8 @@ public class TubeLinesParser {
 
 	private TubeLines _tubeLines;
 
-	public TubeLinesParser() throws Exception {
-		Serializer serializer = new Persister();
-		File source = new File(ClassLoader.getSystemResource("TubeLines.xml")
-				.toURI());
+	public TubeLinesParser(File source) throws Exception {
+		Serializer serializer = new Persister();		
 		_tubeLines = serializer.read(TubeLines.class, source);
 	}
 	

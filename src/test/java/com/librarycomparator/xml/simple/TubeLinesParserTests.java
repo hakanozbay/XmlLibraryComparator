@@ -21,7 +21,9 @@ public class TubeLinesParserTests {
 	
 	@Before
 	public void setUp() throws Exception {
-		TubeLinesParser tubeLinesParser = new TubeLinesParser();
+		File source = new File(ClassLoader.getSystemResource("TubeLines.xml")
+				.toURI());
+		TubeLinesParser tubeLinesParser = new TubeLinesParser(source);
 		_tubeLines = tubeLinesParser.GetTubeLines();
 	}
 
