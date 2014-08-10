@@ -1,6 +1,9 @@
 package com.librarycomparator.xml.simple;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 import java.io.File;
 import java.util.List;
@@ -92,10 +95,8 @@ public class LineStatusParserTests {
 	public void LineStatusZeroHasCorrectStatusTypes() throws Exception {
 		LineStatuses lineStatuses = _lineStatusParser.Parse(_source);
 		LineStatus lineStatusZero = getLineStatus(lineStatuses, "0");
-		List<StatusType> statusTypes = lineStatusZero.getStatus().getStatusTypes();
+		StatusType statusType = lineStatusZero.getStatus().getStatusType();
 		
-		assertEquals(1, statusTypes.size());
-		StatusType statusType = statusTypes.get(0);
 		assertEquals("1", statusType.getID());
 		assertEquals("Line", statusType.getDescription());
 	}
@@ -150,10 +151,7 @@ public class LineStatusParserTests {
 		BranchDisruption branchDisruption = branchDisruptions.getBranchDisruptions().get(0);
 		Status status = branchDisruption.getStatus();
 		
-		List<StatusType> statusTypes = status.getStatusTypes();
-		
-		assertEquals(1, statusTypes.size());
-		StatusType statusType = statusTypes.get(0);
+		StatusType statusType = status.getStatusType();
 		
 		assertEquals("1", statusType.getID());
 		assertEquals("Line", statusType.getDescription());

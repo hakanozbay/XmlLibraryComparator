@@ -2,15 +2,19 @@ package com.librarycomparator.xml.simple.LineStatuses;
 
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
-import org.simpleframework.xml.Root;
 
-@Root
 public class LineStatus {
 	@Attribute
 	private String ID;
 	@Attribute
 	private String StatusDetails;
-
+	@Element
+	private BranchDisruptions BranchDisruptions;
+	@Element
+	private Line Line;
+	@Element
+	private Status Status;
+	
 	public String getId() {
 		return ID;
 	}
@@ -19,22 +23,14 @@ public class LineStatus {
 		return StatusDetails;
 	}
 	
-	@Element
-	private BranchDisruptions BranchDisruptions;
-	
 	public BranchDisruptions getBranchDisruptions(){
 		return BranchDisruptions;
 	}
-	
-	@Element
-	private Line Line;
 	
 	public Line getLine(){
 		return Line;
 	}
 	
-	@Element
-	private Status Status;
 	
 	public Status getStatus(){
 		return Status;

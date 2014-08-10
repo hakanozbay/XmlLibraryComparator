@@ -1,12 +1,8 @@
 package com.librarycomparator.xml.simple.LineStatuses;
 
-import java.util.List;
-
 import org.simpleframework.xml.Attribute;
-import org.simpleframework.xml.ElementList;
-import org.simpleframework.xml.Root;
+import org.simpleframework.xml.Element;
 
-@Root
 public class Status {
 	@Attribute
 	private String ID;
@@ -17,11 +13,11 @@ public class Status {
 	@Attribute
 	private String IsActive;
 	
-	@ElementList(entry = "StatusType", inline = true)
-	private List<StatusType> statusTypes;
+	@Element
+	private StatusType StatusType;
 
-	public List<StatusType> getStatusTypes() {
-		return statusTypes;
+	public StatusType getStatusType() {
+		return StatusType;
 	}
 	
 	public String getDescription(){
