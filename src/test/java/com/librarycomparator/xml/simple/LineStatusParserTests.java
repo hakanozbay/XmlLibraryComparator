@@ -14,6 +14,8 @@ import com.librarycomparator.xml.simple.LineStatuses.BranchDisruptions;
 import com.librarycomparator.xml.simple.LineStatuses.Line;
 import com.librarycomparator.xml.simple.LineStatuses.LineStatus;
 import com.librarycomparator.xml.simple.LineStatuses.LineStatuses;
+import com.librarycomparator.xml.simple.LineStatuses.Status;
+import com.librarycomparator.xml.simple.LineStatuses.StatusType;
 
 public class LineStatusParserTests {
 
@@ -68,6 +70,31 @@ public class LineStatusParserTests {
 		BranchDisruptions branchDisruptions = lineStatusZero.getBranchDisruptions();
 		
 		assertNull(branchDisruptions.getBranchDisruptions());
+	}
+	
+	@Test
+	public void LineStatusZeroHasCorrectStatus() throws Exception {
+		LineStatuses lineStatuses = _lineStatusParser.Parse(_source);
+		LineStatus lineStatusZero = getLineStatus(lineStatuses, "0");
+		Status status = lineStatusZero.getStatus();
+		
+		assertNotNull(status);
+		assertEquals("GS", status.getID());
+		assertEquals("Good Service", status.getDescription());
+		assertEquals("GoodService", status.getCssClass());		
+		assertEquals("true", status.getIsActive());
+	}
+	
+	@Test
+	public void LineStatusZeroHasCorrectStatusTypes() throws Exception {
+		LineStatuses lineStatuses = _lineStatusParser.Parse(_source);
+		LineStatus lineStatusZero = getLineStatus(lineStatuses, "0");
+		List<StatusType> statusTypes = lineStatusZero.getStatus().getStatusTypes();
+		
+		assertEquals(1, statusTypes.size());
+		StatusType statusType = statusTypes.get(0);
+		assertEquals("1", statusType.getID());
+		assertEquals("Line", statusType.getDescription());
 	}
 
 	private LineStatus getLineStatus(LineStatuses lineStatuses, String id) {
