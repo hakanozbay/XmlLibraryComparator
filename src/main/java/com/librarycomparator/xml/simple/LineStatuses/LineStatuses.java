@@ -12,7 +12,7 @@ public class LineStatuses {
 	@ElementList(entry = "LineStatus", inline = true)
 	private List<LineStatus> _lineStatuses;
 
-	public List<LineStatus> getLineStatues() {
+	public List<LineStatus> getLineStatuses() {
 		return _lineStatuses;
 	}
 	

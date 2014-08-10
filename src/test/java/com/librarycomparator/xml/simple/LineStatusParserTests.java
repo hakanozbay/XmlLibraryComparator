@@ -13,63 +13,34 @@ import org.junit.Test;
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 
+import com.librarycomparator.xml.LineStatusParser;
 import com.librarycomparator.xml.TubeLinesParser;
+import com.librarycomparator.xml.simple.LineStatuses.LineStatuses;
 
 public class LineStatusParserTests {
 
-	private TubeLines _tubeLines;
+	LineStatusParser _lineStatusParser;
+	File _source;
 	
 	@Before
 	public void setUp() throws Exception {
-		File source = new File(ClassLoader.getSystemResource("TubeLines.xml")
+		 _source = new File(ClassLoader.getSystemResource("LineStatuses.xml")
 				.toURI());
-		TubeLinesParser tubeLinesParser = new TubeLinesParser(source);
-		_tubeLines = tubeLinesParser.GetTubeLines();
+		 _lineStatusParser = new LineStatusParser();
+
 	}
 
 	@After
 	public void tearDown() {
-		_tubeLines = null;
+		_lineStatusParser = null;
 	}
 
 	@Test
-	public void GetListOfTubeLinesIsNotEmptyTest() {
+	public void GetListOfLineStatusesIsNotEmptyTest() throws Exception {
+		LineStatuses lineStatuses 	= _lineStatusParser.Parse(_source);
+		assertNotNull(lineStatuses);
+		assertFalse(lineStatuses.getLineStatuses().isEmpty());
 
-		assertNotNull(_tubeLines);
-		assertFalse(_tubeLines.getTubeLines().isEmpty());
-
-	}
-
-	@Test
-	public void GetWaterlooAndCityLineTest() {
-		TubeLine waterlooAndCityLine = _tubeLines.getTubeLines().get(0);
-		assertNotNull(waterlooAndCityLine);
-		assertTrue(waterlooAndCityLine.getId().equalsIgnoreCase("12"));
-		assertTrue(waterlooAndCityLine.getName().equals("Waterloo and City"));
-		assertFalse(waterlooAndCityLine.getStations().isEmpty());
-
-	}
-
-	@Test
-	public void GetWaterlooAndCityLineStationsTest() {
-		
-		TubeLine waterlooAndCityLine = GetTubeLine("Waterloo and City", _tubeLines.getTubeLines());
-		List<Station> stations = waterlooAndCityLine.getStations();
-		assertTrue(stations.get(0).getId().equalsIgnoreCase("252"));
-		assertTrue(stations.get(0).getName().equals("Waterloo"));
-
-		assertTrue(stations.get(1).getId().equals("12"));
-		assertTrue(stations.get(1).getName().equals("Bank"));
-	}
-	
-	private TubeLine GetTubeLine(String tubeLineName, List<TubeLine> tubeLines){
-		
-		for(TubeLine tubeLine : tubeLines){
-			if(tubeLine.getName().equals(tubeLineName))
-				return tubeLine;
-		}
-		
-		return null;
-	}
+	}	
 
 }
