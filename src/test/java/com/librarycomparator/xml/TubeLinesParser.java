@@ -5,7 +5,7 @@ import java.io.File;
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 
-import com.librarycomparator.xml.simple.TubeLines;
+import com.librarycomparator.xml.simple.TubeLines.TubeLines;
 
 public class TubeLinesParser {
 

@@ -15,6 +15,9 @@ import org.simpleframework.xml.core.Persister;
 
 import com.librarycomparator.xml.LineStatusParser;
 import com.librarycomparator.xml.TubeLinesParser;
+import com.librarycomparator.xml.simple.TubeLines.Station;
+import com.librarycomparator.xml.simple.TubeLines.TubeLine;
+import com.librarycomparator.xml.simple.TubeLines.TubeLines;
 
 public class TubeLinesParserTests {
 

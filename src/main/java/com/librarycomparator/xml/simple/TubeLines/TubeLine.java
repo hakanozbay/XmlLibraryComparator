@@ -1,4 +1,4 @@
-package com.librarycomparator.xml.simple;
+package com.librarycomparator.xml.simple.TubeLines;
 
 import java.util.List;
 
