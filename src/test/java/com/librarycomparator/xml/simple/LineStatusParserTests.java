@@ -14,7 +14,6 @@ import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 
 import com.librarycomparator.xml.LineStatusParser;
-import com.librarycomparator.xml.TubeLinesParser;
 import com.librarycomparator.xml.simple.LineStatuses.LineStatuses;
 
 public class LineStatusParserTests {

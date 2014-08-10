@@ -6,8 +6,6 @@ import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
-import com.librarycomparator.xml.simple.TubeLine;
-
 @Root
 public class Status {
 	@Attribute
@@ -16,8 +14,10 @@ public class Status {
 	public String CssClass;
 	@Attribute
 	public String Description;
+	@Attribute
+	private String IsActive;
 	
-	@ElementList(entry = "StatusTypes", inline = true)
+	@ElementList(entry = "StatusType", inline = true)
 	private List<StatusType> statusTypes;
 
 	public List<StatusType> getStatusTypes() {
@@ -30,6 +30,10 @@ public class Status {
 	
 	public String getCssClass(){
 		return CssClass;
+	}
+	
+	public String getIsActive(){
+		return IsActive;
 	}
 	
 	public String getID(){

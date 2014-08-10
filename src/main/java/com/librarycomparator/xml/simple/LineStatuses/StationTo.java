@@ -4,7 +4,7 @@ import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Root;
 
 @Root
-public class Station {
+public class StationTo {
 	@Attribute
 	private String ID;
 	@Attribute

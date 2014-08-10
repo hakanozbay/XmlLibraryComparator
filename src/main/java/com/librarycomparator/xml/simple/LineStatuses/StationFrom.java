@@ -4,17 +4,17 @@ import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Root;
 
 @Root
-public class Line {
+public class StationFrom {
 	@Attribute
 	private String ID;
 	@Attribute
 	private String Name;
-
-	public String getId() {
-		return ID;
-	}
-
-	public String getName() {
+	
+	public String getName(){
 		return Name;
+	}
+	
+	public String getID(){
+		return ID;		
 	}
 }

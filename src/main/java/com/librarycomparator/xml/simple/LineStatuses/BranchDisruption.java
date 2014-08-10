@@ -3,19 +3,24 @@ package com.librarycomparator.xml.simple.LineStatuses;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
 
-@Root
+@Root(name ="BranchDisruption")
 public class BranchDisruption {
-	@Element(name = "StationTo")
-	public Station stationTo;
-	@Element(name = "StationFrom")
-	public Station stationFrom;
+	@Element
+	public StationTo StationTo;
+	@Element
+	public StationFrom StationFrom;
+	@Element Status Status;
 	
-	public Station getStationTo(){
-		return stationTo;
+	public Status getStatus(){
+		return Status;
 	}
 	
-	public Station getStationFrom(){
-		return stationFrom;
+	public StationTo getStationTo(){
+		return StationTo;
+	}
+	
+	public StationFrom getStationFrom(){
+		return StationFrom;
 	}
 	
 }

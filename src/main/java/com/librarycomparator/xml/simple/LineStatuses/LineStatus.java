@@ -1,31 +1,43 @@
 package com.librarycomparator.xml.simple.LineStatuses;
 
-import java.util.List;
-
 import org.simpleframework.xml.Attribute;
-import org.simpleframework.xml.ElementList;
+import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
 
 @Root
 public class LineStatus {
 	@Attribute
-	private String id;
+	private String ID;
 	@Attribute
-	private String statusDetails;
+	private String StatusDetails;
 
 	public String getId() {
-		return id;
+		return ID;
 	}
 
 	public String getStatusDetails() {
-		return statusDetails;
+		return StatusDetails;
 	}
 	
-	@ElementList(entry ="BranchDisruptions", inline = true)
-	private List<BranchDisruption> branchDiscruptions;
+	@Element
+	private BranchDisruptions BranchDisruptions;
 	
-	public List<BranchDisruption> getBranchDisruptions(){
-		return branchDiscruptions;
+	public BranchDisruptions getBranchDisruptions(){
+		return BranchDisruptions;
+	}
+	
+	@Element
+	private Line Line;
+	
+	public Line getLine(){
+		return Line;
+	}
+	
+	@Element
+	private Status Status;
+	
+	public Status getStatus(){
+		return Status;
 	}
 	
 }
