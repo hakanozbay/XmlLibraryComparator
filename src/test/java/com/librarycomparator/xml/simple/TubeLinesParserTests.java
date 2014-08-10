@@ -10,10 +10,6 @@ import java.util.List;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.simpleframework.xml.Serializer;
-import org.simpleframework.xml.core.Persister;
-
-import com.librarycomparator.xml.LineStatusParser;
 import com.librarycomparator.xml.TubeLinesParser;
 import com.librarycomparator.xml.simple.TubeLines.Station;
 import com.librarycomparator.xml.simple.TubeLines.TubeLine;
