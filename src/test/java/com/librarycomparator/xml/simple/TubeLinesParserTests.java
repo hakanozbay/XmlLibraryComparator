@@ -13,6 +13,7 @@ import org.junit.Test;
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 
+import com.librarycomparator.xml.LineStatusParser;
 import com.librarycomparator.xml.TubeLinesParser;
 
 public class TubeLinesParserTests {
@@ -21,10 +22,10 @@ public class TubeLinesParserTests {
 	
 	@Before
 	public void setUp() throws Exception {
-		File source = new File(ClassLoader.getSystemResource("TubeLines.xml")
+		File source = new File(ClassLoader.getSystemResource("LineStatus.xml")
 				.toURI());
-		TubeLinesParser tubeLinesParser = new TubeLinesParser(source);
-		_tubeLines = tubeLinesParser.GetTubeLines();
+		LineStatusParser lineStatusParser = new LineStatusParser();
+		
 	}
 
 	@After
@@ -40,36 +41,5 @@ public class TubeLinesParserTests {
 
 	}
 
-	@Test
-	public void GetWaterlooAndCityLineTest() {
-		TubeLine waterlooAndCityLine = _tubeLines.getTubeLines().get(0);
-		assertNotNull(waterlooAndCityLine);
-		assertTrue(waterlooAndCityLine.getId().equalsIgnoreCase("12"));
-		assertTrue(waterlooAndCityLine.getName().equals("Waterloo and City"));
-		assertFalse(waterlooAndCityLine.getStations().isEmpty());
-
-	}
-
-	@Test
-	public void GetWaterlooAndCityLineStationsTest() {
-		
-		TubeLine waterlooAndCityLine = GetTubeLine("Waterloo and City", _tubeLines.getTubeLines());
-		List<Station> stations = waterlooAndCityLine.getStations();
-		assertTrue(stations.get(0).getId().equalsIgnoreCase("252"));
-		assertTrue(stations.get(0).getName().equals("Waterloo"));
-
-		assertTrue(stations.get(1).getId().equals("12"));
-		assertTrue(stations.get(1).getName().equals("Bank"));
-	}
-	
-	private TubeLine GetTubeLine(String tubeLineName, List<TubeLine> tubeLines){
-		
-		for(TubeLine tubeLine : tubeLines){
-			if(tubeLine.getName().equals(tubeLineName))
-				return tubeLine;
-		}
-		
-		return null;
-	}
 
 }
