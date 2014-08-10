@@ -10,10 +10,13 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.librarycomparator.xml.LineStatusParser;
+import com.librarycomparator.xml.simple.LineStatuses.BranchDisruption;
 import com.librarycomparator.xml.simple.LineStatuses.BranchDisruptions;
 import com.librarycomparator.xml.simple.LineStatuses.Line;
 import com.librarycomparator.xml.simple.LineStatuses.LineStatus;
 import com.librarycomparator.xml.simple.LineStatuses.LineStatuses;
+import com.librarycomparator.xml.simple.LineStatuses.StationFrom;
+import com.librarycomparator.xml.simple.LineStatuses.StationTo;
 import com.librarycomparator.xml.simple.LineStatuses.Status;
 import com.librarycomparator.xml.simple.LineStatuses.StatusType;
 
@@ -96,7 +99,66 @@ public class LineStatusParserTests {
 		assertEquals("1", statusType.getID());
 		assertEquals("Line", statusType.getDescription());
 	}
-
+	
+	@Test
+	public void LineStatusTwoHasOneBranchDisruption() throws Exception{
+		LineStatuses lineStatuses = _lineStatusParser.Parse(_source);
+		LineStatus lineStatusTwo = getLineStatus(lineStatuses, "2");
+		
+		BranchDisruptions branchDisruptions = lineStatusTwo.getBranchDisruptions();
+		
+		assertNotNull(branchDisruptions.getBranchDisruptions());
+		assertEquals(1, branchDisruptions.getBranchDisruptions().size());
+	}
+	
+	@Test
+	public void LineStatusTwoHasCorrectBranchDisruptionsStations() throws Exception{
+		LineStatuses lineStatuses = _lineStatusParser.Parse(_source);
+		LineStatus lineStatusTwo = getLineStatus(lineStatuses, "2");
+		
+		BranchDisruptions branchDisruptions = lineStatusTwo.getBranchDisruptions();
+		BranchDisruption branchDisruption = branchDisruptions.getBranchDisruptions().get(0);
+		StationFrom stationFrom = branchDisruption.getStationFrom();
+		StationTo stationTo = branchDisruption.getStationTo();
+		assertEquals("Richmond", stationTo.getName());
+		assertEquals("190", stationTo.getID());
+		assertEquals("Turnham Green", stationFrom.getName());
+		assertEquals("238", stationFrom.getID());
+	}
+	
+	@Test
+	public void LineStatusTwoHasCorrectBranchDisruptionsStatus() throws Exception{
+		LineStatuses lineStatuses = _lineStatusParser.Parse(_source);
+		LineStatus lineStatusTwo = getLineStatus(lineStatuses, "2");
+		
+		BranchDisruptions branchDisruptions = lineStatusTwo.getBranchDisruptions();
+		BranchDisruption branchDisruption = branchDisruptions.getBranchDisruptions().get(0);
+		Status status = branchDisruption.getStatus();
+		assertNotNull(status);
+		assertEquals("PS", status.getID());	
+		assertEquals("DisruptedService", status.getCssClass());		
+		assertEquals("Part Suspended", status.getDescription());
+		assertEquals("true", status.getIsActive());
+	}
+	
+	@Test
+	public void LineStatusTwoHasCorrectBranchDisruptionsStatusTypes() throws Exception {
+		LineStatuses lineStatuses = _lineStatusParser.Parse(_source);
+		LineStatus lineStatusTwo = getLineStatus(lineStatuses, "2");
+		
+		BranchDisruptions branchDisruptions = lineStatusTwo.getBranchDisruptions();
+		BranchDisruption branchDisruption = branchDisruptions.getBranchDisruptions().get(0);
+		Status status = branchDisruption.getStatus();
+		
+		List<StatusType> statusTypes = status.getStatusTypes();
+		
+		assertEquals(1, statusTypes.size());
+		StatusType statusType = statusTypes.get(0);
+		
+		assertEquals("1", statusType.getID());
+		assertEquals("Line", statusType.getDescription());
+	}
+	
 	private LineStatus getLineStatus(LineStatuses lineStatuses, String id) {
 		List<LineStatus> lineStatusList = lineStatuses.getLineStatuses();
 
