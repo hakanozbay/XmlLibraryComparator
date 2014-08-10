@@ -13,16 +13,16 @@ import org.junit.Test;
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 
+import com.librarycomparator.xml.TubeLinesParser;
+
 public class TubeLinesParserTests {
 
 	private TubeLines _tubeLines;
 	
 	@Before
 	public void setUp() throws Exception {
-		Serializer serializer = new Persister();
-		File source = new File(ClassLoader.getSystemResource("TubeLines.xml")
-				.toURI());
-		_tubeLines = serializer.read(TubeLines.class, source);
+		TubeLinesParser tubeLinesParser = new TubeLinesParser();
+		_tubeLines = tubeLinesParser.GetTubeLines();
 	}
 
 	@After
