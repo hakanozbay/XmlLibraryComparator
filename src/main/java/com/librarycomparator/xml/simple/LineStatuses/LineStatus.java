@@ -1,4 +1,4 @@
-package com.librarycomparator.xml.simple;
+package com.librarycomparator.xml.simple.LineStatuses;
 
 import java.util.List;
 
@@ -20,6 +20,12 @@ public class LineStatus {
 	public String getStatusDetails() {
 		return statusDetails;
 	}
-
+	
+	@ElementList(entry ="BranchDisruptions", inline = true)
+	private List<BranchDisruption> branchDiscruptions;
+	
+	public List<BranchDisruption> getBranchDisruptions(){
+		return branchDiscruptions;
+	}
 	
 }
