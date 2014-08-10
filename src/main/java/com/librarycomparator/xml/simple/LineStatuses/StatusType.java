@@ -6,9 +6,9 @@ import org.simpleframework.xml.Root;
 @Root
 public class StatusType {
 	@Attribute
-	public String ID;
+	private String ID;
 	@Attribute
-	public String Description;
+	private String Description;
 	
 	public String getDescription(){
 		return Description;

@@ -9,11 +9,11 @@ import org.simpleframework.xml.Root;
 @Root
 public class Status {
 	@Attribute
-	public String ID;
+	private String ID;
 	@Attribute
-	public String CssClass;
+	private String CssClass;
 	@Attribute
-	public String Description;
+	private String Description;
 	@Attribute
 	private String IsActive;
 	

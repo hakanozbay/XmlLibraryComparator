@@ -10,6 +10,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.librarycomparator.xml.LineStatusParser;
+import com.librarycomparator.xml.simple.LineStatuses.BranchDisruptions;
 import com.librarycomparator.xml.simple.LineStatuses.Line;
 import com.librarycomparator.xml.simple.LineStatuses.LineStatus;
 import com.librarycomparator.xml.simple.LineStatuses.LineStatuses;
@@ -58,6 +59,15 @@ public class LineStatusParserTests {
 
 		assertEquals("1", lineStatusZeroLine.getId());
 		assertEquals("Bakerloo", lineStatusZeroLine.getName());
+	}
+
+	@Test
+	public void LineStatusZeroHasNoBranchDisruptions() throws Exception {
+		LineStatuses lineStatuses = _lineStatusParser.Parse(_source);
+		LineStatus lineStatusZero = getLineStatus(lineStatuses, "0");
+		BranchDisruptions branchDisruptions = lineStatusZero.getBranchDisruptions();
+		
+		assertNull(branchDisruptions.getBranchDisruptions());
 	}
 
 	private LineStatus getLineStatus(LineStatuses lineStatuses, String id) {

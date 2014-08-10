@@ -8,7 +8,7 @@ import org.simpleframework.xml.Root;
 @Root
 public class BranchDisruptions {
 	@ElementList(name ="BranchDisruption", inline=true, required=false)
-	public List<BranchDisruption> branchDisruptions;
+	private List<BranchDisruption> branchDisruptions;
 	
 	public List<BranchDisruption> getBranchDisruptions(){
 		return branchDisruptions;

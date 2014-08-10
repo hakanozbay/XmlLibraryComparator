@@ -6,9 +6,9 @@ import org.simpleframework.xml.Root;
 @Root(name ="BranchDisruption")
 public class BranchDisruption {
 	@Element
-	public StationTo StationTo;
+	private StationTo StationTo;
 	@Element
-	public StationFrom StationFrom;
+	private StationFrom StationFrom;
 	@Element Status Status;
 	
 	public Status getStatus(){
