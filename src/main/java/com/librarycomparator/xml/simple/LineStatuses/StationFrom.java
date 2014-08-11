@@ -1,4 +1,4 @@
-package com.librarycomparator.xml.simple.LineStatuses;
+package com.librarycomparator.xml.simple.linestatuses;
 
 import org.simpleframework.xml.Attribute;
 

@@ -1,4 +1,4 @@
-package com.librarycomparator.xml.simple.TubeLines;
+package com.librarycomparator.xml.simple.tubelines;
 
 import org.simpleframework.xml.Attribute;
 

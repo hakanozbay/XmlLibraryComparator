@@ -5,7 +5,7 @@ import java.io.File;
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 
-import com.librarycomparator.xml.simple.LineStatuses.LineStatuses;
+import com.librarycomparator.xml.simple.linestatuses.LineStatuses;
 
 public class LineStatusParser {
 	Serializer serializer;

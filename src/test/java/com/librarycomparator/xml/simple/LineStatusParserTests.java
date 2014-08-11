@@ -13,15 +13,15 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.librarycomparator.xml.LineStatusParser;
-import com.librarycomparator.xml.simple.LineStatuses.BranchDisruption;
-import com.librarycomparator.xml.simple.LineStatuses.BranchDisruptions;
-import com.librarycomparator.xml.simple.LineStatuses.Line;
-import com.librarycomparator.xml.simple.LineStatuses.LineStatus;
-import com.librarycomparator.xml.simple.LineStatuses.LineStatuses;
-import com.librarycomparator.xml.simple.LineStatuses.StationFrom;
-import com.librarycomparator.xml.simple.LineStatuses.StationTo;
-import com.librarycomparator.xml.simple.LineStatuses.Status;
-import com.librarycomparator.xml.simple.LineStatuses.StatusType;
+import com.librarycomparator.xml.simple.linestatuses.BranchDisruption;
+import com.librarycomparator.xml.simple.linestatuses.BranchDisruptions;
+import com.librarycomparator.xml.simple.linestatuses.Line;
+import com.librarycomparator.xml.simple.linestatuses.LineStatus;
+import com.librarycomparator.xml.simple.linestatuses.LineStatuses;
+import com.librarycomparator.xml.simple.linestatuses.StationFrom;
+import com.librarycomparator.xml.simple.linestatuses.StationTo;
+import com.librarycomparator.xml.simple.linestatuses.Status;
+import com.librarycomparator.xml.simple.linestatuses.StatusType;
 
 public class LineStatusParserTests {
 

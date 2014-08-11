@@ -12,9 +12,9 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.librarycomparator.xml.TubeLinesParser;
-import com.librarycomparator.xml.simple.TubeLines.Station;
-import com.librarycomparator.xml.simple.TubeLines.TubeLine;
-import com.librarycomparator.xml.simple.TubeLines.TubeLines;
+import com.librarycomparator.xml.simple.tubelines.Station;
+import com.librarycomparator.xml.simple.tubelines.TubeLine;
+import com.librarycomparator.xml.simple.tubelines.TubeLines;
 
 public class TubeLinesParserTests {
 
