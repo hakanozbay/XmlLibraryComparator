@@ -2,6 +2,7 @@ package com.librarycomparator.xml.simple.linestatuses;
 
 import java.util.List;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
@@ -16,4 +17,8 @@ public class LineStatuses {
 		return _lineStatuses;
 	}
 	
+	@Override
+	public String toString() {
+		return ReflectionToStringBuilder.toString(this);
+	}
 }

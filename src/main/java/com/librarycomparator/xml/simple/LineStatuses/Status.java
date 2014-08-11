@@ -1,5 +1,6 @@
 package com.librarycomparator.xml.simple.linestatuses;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
 
@@ -34,5 +35,10 @@ public class Status {
 	
 	public String getID(){
 		return ID;
+	}
+	
+	@Override
+	public String toString() {
+		return ReflectionToStringBuilder.toString(this);
 	}
 }

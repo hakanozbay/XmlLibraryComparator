@@ -2,6 +2,7 @@ package com.librarycomparator.xml.simple.tubelines;
 
 import java.util.List;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
@@ -13,5 +14,10 @@ public class TubeLines {
 
 	public List<TubeLine> getTubeLines() {
 		return lines;
+	}
+	
+	@Override
+	public String toString() {
+		return ReflectionToStringBuilder.toString(this);
 	}
 }

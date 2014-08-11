@@ -2,6 +2,7 @@ package com.librarycomparator.xml.simple.tubelines;
 
 import java.util.List;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
@@ -29,4 +30,8 @@ public class TubeLine {
 		return stations;
 	}
 
+	@Override
+	public String toString() {
+		return ReflectionToStringBuilder.toString(this);
+	}
 }

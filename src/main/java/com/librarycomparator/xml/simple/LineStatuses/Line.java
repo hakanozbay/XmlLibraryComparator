@@ -1,5 +1,6 @@
 package com.librarycomparator.xml.simple.linestatuses;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.simpleframework.xml.Attribute;
 
 public class Line {
@@ -14,5 +15,10 @@ public class Line {
 
 	public String getName() {
 		return Name;
+	}
+	
+	@Override
+	public String toString() {
+		return ReflectionToStringBuilder.toString(this);
 	}
 }

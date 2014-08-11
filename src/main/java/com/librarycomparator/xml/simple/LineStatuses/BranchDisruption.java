@@ -1,5 +1,6 @@
 package com.librarycomparator.xml.simple.linestatuses;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.simpleframework.xml.Element;
 
 public class BranchDisruption {
@@ -20,6 +21,11 @@ public class BranchDisruption {
 	
 	public StationFrom getStationFrom(){
 		return StationFrom;
+	}
+	
+	@Override
+	public String toString() {
+		return ReflectionToStringBuilder.toString(this);
 	}
 	
 }
