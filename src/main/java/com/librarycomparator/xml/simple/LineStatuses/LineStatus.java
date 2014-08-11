@@ -39,6 +39,7 @@ public class LineStatus {
 		return Status;
 	}
 	
+	@Override
 	public String toString() {
 		return ReflectionToStringBuilder.toString(this);
 	}
