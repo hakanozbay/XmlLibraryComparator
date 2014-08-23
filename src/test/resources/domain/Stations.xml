@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Stations>
+	<Station ID="0" Name="Stockwell">
+		<Adjacents>
+			<Adjacent StationId="1" LineId="0"/>
+		</Adjacents>
+		<Lines>
+			<Line id="0" />
+		</Lines>
+	</Station>
+	<Station ID="1" Name="Oval">
+		<Adjacents>
+			<Adjacent StationId="0" LineId="0"/>
+			<Adjacent StationId="2" LineId="0"/>
+		</Adjacents>
+		<Lines>
+			<Line id="0" />
+		</Lines>
+	</Station>
+	<Station ID="2" Name="Kennington">
+		<Adjacents>
+			<Adjacent StationId="1" LineId="0"/>			
+		</Adjacents>
+		<Lines>
+			<Line id="0" />
+		</Lines>
+	</Station>
+</Stations>
