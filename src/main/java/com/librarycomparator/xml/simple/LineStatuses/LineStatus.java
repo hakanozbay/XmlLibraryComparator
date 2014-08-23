@@ -1,7 +1,5 @@
 package com.librarycomparator.xml.simple.linestatuses;
 
-import java.util.Objects;
-
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;

@@ -27,32 +27,28 @@ import com.librarycomparator.xml.simple.linestatuses.StatusType;
 
 public class LineStatusParserTests {
 
-	LineStatusParser _lineStatusParser;
 	File _source;
 
 	@Before
 	public void setUp() throws Exception {
 		_source = new File(ClassLoader.getSystemResource("LineStatuses.xml")
 				.toURI());
-		_lineStatusParser = new LineStatusParser();
-
 	}
 
 	@After
 	public void tearDown() {
-		_lineStatusParser = null;
 	}
 
 	@Test
 	public void GetListOfLineStatusesIsNotEmptyTest() throws Exception {
-		LineStatuses lineStatuses = _lineStatusParser.parse(_source);
+		LineStatuses lineStatuses = LineStatusParser.parse(_source);
 		assertNotNull(lineStatuses);
 		assertFalse(lineStatuses.getLineStatuses().isEmpty());
 	}
 
 	@Test
 	public void LineStatusZeroExists() throws Exception {
-		LineStatuses lineStatuses = _lineStatusParser.parse(_source);
+		LineStatuses lineStatuses = LineStatusParser.parse(_source);
 		LineStatus lineStatusZero = getLineStatus(lineStatuses, "0");
 
 		assertNotNull(lineStatusZero);
@@ -60,7 +56,7 @@ public class LineStatusParserTests {
 
 	@Test
 	public void LineStatusZeroHasCorrectLine() throws Exception {
-		LineStatuses lineStatuses = _lineStatusParser.parse(_source);
+		LineStatuses lineStatuses = LineStatusParser.parse(_source);
 		LineStatus lineStatusZero = getLineStatus(lineStatuses, "0");
 
 		Line lineStatusZeroLine = lineStatusZero.getLine();
@@ -73,7 +69,7 @@ public class LineStatusParserTests {
 
 	@Test
 	public void LineStatusZeroHasNoBranchDisruptions() throws Exception {
-		LineStatuses lineStatuses = _lineStatusParser.parse(_source);
+		LineStatuses lineStatuses = LineStatusParser.parse(_source);
 		LineStatus lineStatusZero = getLineStatus(lineStatuses, "0");
 		BranchDisruptions branchDisruptions = lineStatusZero.getBranchDisruptions();
 		
@@ -82,7 +78,7 @@ public class LineStatusParserTests {
 	
 	@Test
 	public void LineStatusZeroHasCorrectStatus() throws Exception {
-		LineStatuses lineStatuses = _lineStatusParser.parse(_source);
+		LineStatuses lineStatuses = LineStatusParser.parse(_source);
 		LineStatus lineStatusZero = getLineStatus(lineStatuses, "0");
 		Status status = lineStatusZero.getStatus();
 		
@@ -95,7 +91,7 @@ public class LineStatusParserTests {
 	
 	@Test
 	public void LineStatusZeroHasCorrectStatusTypes() throws Exception {
-		LineStatuses lineStatuses = _lineStatusParser.parse(_source);
+		LineStatuses lineStatuses = LineStatusParser.parse(_source);
 		LineStatus lineStatusZero = getLineStatus(lineStatuses, "0");
 		StatusType statusType = lineStatusZero.getStatus().getStatusType();
 		
@@ -105,7 +101,7 @@ public class LineStatusParserTests {
 	
 	@Test
 	public void LineStatusTwoHasOneBranchDisruption() throws Exception{
-		LineStatuses lineStatuses = _lineStatusParser.parse(_source);
+		LineStatuses lineStatuses = LineStatusParser.parse(_source);
 		LineStatus lineStatusTwo = getLineStatus(lineStatuses, "2");
 		
 		BranchDisruptions branchDisruptions = lineStatusTwo.getBranchDisruptions();
@@ -116,7 +112,7 @@ public class LineStatusParserTests {
 	
 	@Test
 	public void LineStatusTwoHasCorrectBranchDisruptionsStations() throws Exception{
-		LineStatuses lineStatuses = _lineStatusParser.parse(_source);
+		LineStatuses lineStatuses = LineStatusParser.parse(_source);
 		LineStatus lineStatusTwo = getLineStatus(lineStatuses, "2");
 		
 		BranchDisruptions branchDisruptions = lineStatusTwo.getBranchDisruptions();
@@ -131,7 +127,7 @@ public class LineStatusParserTests {
 	
 	@Test
 	public void LineStatusTwoHasCorrectBranchDisruptionsStatus() throws Exception{
-		LineStatuses lineStatuses = _lineStatusParser.parse(_source);
+		LineStatuses lineStatuses = LineStatusParser.parse(_source);
 		LineStatus lineStatusTwo = getLineStatus(lineStatuses, "2");
 		
 		BranchDisruptions branchDisruptions = lineStatusTwo.getBranchDisruptions();
@@ -146,7 +142,7 @@ public class LineStatusParserTests {
 	
 	@Test
 	public void LineStatusTwoHasCorrectBranchDisruptionsStatusTypes() throws Exception {
-		LineStatuses lineStatuses = _lineStatusParser.parse(_source);
+		LineStatuses lineStatuses = LineStatusParser.parse(_source);
 		LineStatus lineStatusTwo = getLineStatus(lineStatuses, "2");
 		
 		BranchDisruptions branchDisruptions = lineStatusTwo.getBranchDisruptions();
