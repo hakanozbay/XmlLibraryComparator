@@ -11,7 +11,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.librarycomparator.xml.TubeLinesParser;
+import com.librarycomparator.xml.parser.TubeLinesParser;
 import com.librarycomparator.xml.simple.tubelines.Station;
 import com.librarycomparator.xml.simple.tubelines.TubeLine;
 import com.librarycomparator.xml.simple.tubelines.TubeLines;

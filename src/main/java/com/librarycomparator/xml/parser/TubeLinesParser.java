@@ -1,4 +1,4 @@
-package com.librarycomparator.xml;
+package com.librarycomparator.xml.parser;
 
 import java.io.File;
 

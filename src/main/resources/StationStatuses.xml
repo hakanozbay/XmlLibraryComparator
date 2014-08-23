@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ArrayOfStationStatus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://webservices.lul.co.uk/">
+	<StationStatus ID="24"
+		StatusDetails="The Jubilee line is not serving this station while upgrade work takes place. Call Travel Information Centre on 0343 222 1234 for help with your journey.">
+		<Station ID="24" Name="Bond Street" />
+		<Status ID="PD" CssClass="DisruptedService" Description="Part Closed"
+			IsActive="true">
+			<StatusType ID="2" Description="Station" />
+		</Status>
+	</StationStatus>
+	<StationStatus ID="55"
+		StatusDetails="This station is open for exit only and closed to westbound services at weekends to prevent congestion during planned lift works. Please use Leicester Square or Holborn for your return journey.">
+		<Station ID="55" Name="Covent Garden" />
+		<Status ID="EO" CssClass="DisruptedService" Description="Exit Only"
+			IsActive="true">
+			<StatusType ID="2" Description="Station" />
+		</Status>
+	</StationStatus>
+	<StationStatus ID="74"
+		StatusDetails="The Bakerloo and Northern lines are not serving this station while upgrade work takes place. Please use nearby Charing Cross for the Bakerloo and Northern lines.">
+		<Station ID="74" Name="Embankment" />
+		<Status ID="PD" CssClass="DisruptedService" Description="Part Closed"
+			IsActive="true">
+			<StatusType ID="2" Description="Station" />
+		</Status>
+	</StationStatus>
+	<StationStatus ID="74"
+		StatusDetails="The Bakerloo and Northern lines are not serving this station while upgrade work takes place. Please use nearby Charing Cross for the Bakerloo and Northern lines.">
+		<Station ID="74" Name="Embankment" />
+		<Status ID="PD" CssClass="DisruptedService" Description="Part Closed"
+			IsActive="true">
+			<StatusType ID="2" Description="Station" />
+		</Status>
+	</StationStatus>
+	<StationStatus ID="85"
+		StatusDetails="The Piccadilly line is not serving this station due to lift replacement work. District and Circle Lines are not affected. Call our Travel Information Centre on 0843 222 1234 if you need help planning your journey">
+		<Station ID="85" Name="Gloucester Road" />
+		<Status ID="PD" CssClass="DisruptedService" Description="Part Closed"
+			IsActive="true">
+			<StatusType ID="2" Description="Station" />
+		</Status>
+	</StationStatus>
+	<StationStatus ID="173"
+		StatusDetails="This station is exit only from the Bakerloo line while upgrade work takes place. This station is fully open to all other Underground lines. Call Travel Information on 0343 222 1234 for help with your journey.">
+		<Station ID="173" Name="Paddington" />
+		<Status ID="EO" CssClass="DisruptedService" Description="Exit Only"
+			IsActive="true">
+			<StatusType ID="2" Description="Station" />
+		</Status>
+	</StationStatus>
+	<StationStatus ID="259"
+		StatusDetails="Step free access is not available to the c2c platforms while we fix a faulty lift. Call our Travel Information Centre on 0343 222 1234 if you need help planning your journey.">
+		<Station ID="259" Name="West Ham" />
+		<Status ID="NS" CssClass="Closed" Description="No Step Free Access"
+			IsActive="true">
+			<StatusType ID="2" Description="Station" />
+		</Status>
+	</StationStatus>
+	<StationStatus ID="264"
+		StatusDetails="Step free access is not available to the e/b District & s/b London Overground/Southern platforms while we fix a faulty lift. Call our Travel Information Centre on 0343 222 1234 if you need help planning your journey">
+		<Station ID="264" Name="Westbourne Park" />
+		<Status ID="NS" CssClass="Closed" Description="No Step Free Access"
+			IsActive="true">
+			<StatusType ID="2" Description="Station" />
+		</Status>
+	</StationStatus>
+	<StationStatus ID="317"
+		StatusDetails="Step free access is not available for trains towards Canning Town while we fix a faulty lift. Call our Travel Information Centre on 0343 222 1234 if you need help planning your journey.">
+		<Station ID="317" Name="Gallions Reach" />
+		<Status ID="NS" CssClass="Closed" Description="No Step Free Access"
+			IsActive="true">
+			<StatusType ID="2" Description="Station" />
+		</Status>
+	</StationStatus>
+	<StationStatus ID="320"
+		StatusDetails="Step free access is not available for trains towards Stratford while we fix a faulty lift. Call our Travel Information Centre on 0343 222 1234 if you need help planning your journey.">
+		<Station ID="320" Name="Hackney Central" />
+		<Status ID="NS" CssClass="Closed" Description="No Step Free Access"
+			IsActive="true">
+			<StatusType ID="2" Description="Station" />
+		</Status>
+	</StationStatus>
+</ArrayOfStationStatus>

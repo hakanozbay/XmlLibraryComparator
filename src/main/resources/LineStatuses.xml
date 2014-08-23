@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ArrayOfLineStatus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://webservices.lul.co.uk/">
+	<LineStatus ID="0" StatusDetails="">
+		<BranchDisruptions />
+		<Line ID="1" Name="Bakerloo" />
+		<Status ID="GS" CssClass="GoodService" Description="Good Service"
+			IsActive="true">
+			<StatusType ID="1" Description="Line" />
+		</Status>
+	</LineStatus>
+	<LineStatus ID="1" StatusDetails="">
+		<BranchDisruptions />
+		<Line ID="2" Name="Central" />
+		<Status ID="GS" CssClass="GoodService" Description="Good Service"
+			IsActive="true">
+			<StatusType ID="1" Description="Line" />
+		</Status>
+	</LineStatus>
+	<LineStatus ID="10"
+		StatusDetails="Severe anticlockwise delays while we fix a signal failure at High Street Kensington.">
+		<BranchDisruptions />
+		<Line ID="7" Name="Circle" />
+		<Status ID="SD" CssClass="DisruptedService" Description="Severe Delays"
+			IsActive="true">
+			<StatusType ID="1" Description="Line" />
+		</Status>
+	</LineStatus>
+	<LineStatus ID="2"
+		StatusDetails="No service Turnham Green to Richmond due to flooding. Tickets valid on local buses, London Overground and South West Trains.">
+		<BranchDisruptions>
+			<BranchDisruption>
+				<StationTo ID="190" Name="Richmond" />
+				<StationFrom ID="238" Name="Turnham Green" />
+				<Status ID="PS" CssClass="DisruptedService" Description="Part Suspended"
+					IsActive="true">
+					<StatusType ID="1" Description="Line" />
+				</Status>
+			</BranchDisruption>
+		</BranchDisruptions>
+		<Line ID="9" Name="District" />
+		<Status ID="PS" CssClass="DisruptedService" Description="Part Suspended"
+			IsActive="true">
+			<StatusType ID="1" Description="Line" />
+		</Status>
+	</LineStatus>
+	<LineStatus ID="8" StatusDetails="">
+		<BranchDisruptions />
+		<Line ID="8" Name="Hammersmith and City" />
+		<Status ID="GS" CssClass="GoodService" Description="Good Service"
+			IsActive="true">
+			<StatusType ID="1" Description="Line" />
+		</Status>
+	</LineStatus>
+	<LineStatus ID="4" StatusDetails="">
+		<BranchDisruptions />
+		<Line ID="4" Name="Jubilee" />
+		<Status ID="GS" CssClass="GoodService" Description="Good Service"
+			IsActive="true">
+			<StatusType ID="1" Description="Line" />
+		</Status>
+	</LineStatus>
+	<LineStatus ID="9"
+		StatusDetails="No service between Baker Street and Aldgate due to flooding. Tickets valid on local buses. No service between Rayners Lane and Uxbridge due to planned engineering work. Replacement bus services are operating. GOOD SERVICE on the rest of the line.">
+		<BranchDisruptions>
+			<BranchDisruption>
+				<StationTo ID="2" Name="Aldgate" />
+				<StationFrom ID="10" Name="Baker Street" />
+				<Status ID="PS" CssClass="DisruptedService" Description="Part Suspended"
+					IsActive="true">
+					<StatusType ID="1" Description="Line" />
+				</Status>
+			</BranchDisruption>
+			<BranchDisruption>
+				<StationTo ID="244" Name="Uxbridge" />
+				<StationFrom ID="187" Name="Rayners Lane" />
+				<Status ID="PC" CssClass="DisruptedService" Description="Part Closure"
+					IsActive="true">
+					<StatusType ID="1" Description="Line" />
+				</Status>
+			</BranchDisruption>
+		</BranchDisruptions>
+		<Line ID="11" Name="Metropolitan" />
+		<Status ID="PS" CssClass="DisruptedService" Description="Part Suspended"
+			IsActive="true">
+			<StatusType ID="1" Description="Line" />
+		</Status>
+	</LineStatus>
+	<LineStatus ID="5" StatusDetails="">
+		<BranchDisruptions />
+		<Line ID="5" Name="Northern" />
+		<Status ID="GS" CssClass="GoodService" Description="Good Service"
+			IsActive="true">
+			<StatusType ID="1" Description="Line" />
+		</Status>
+	</LineStatus>
+	<LineStatus ID="6"
+		StatusDetails="No service between Rayners Lane and Uxbridge due to planned engineering work. Replacement bus services are operating. GOOD SERVICE on the rest of the line.">
+		<BranchDisruptions>
+			<BranchDisruption>
+				<StationTo ID="244" Name="Uxbridge" />
+				<StationFrom ID="187" Name="Rayners Lane" />
+				<Status ID="PC" CssClass="DisruptedService" Description="Part Closure"
+					IsActive="true">
+					<StatusType ID="1" Description="Line" />
+				</Status>
+			</BranchDisruption>
+		</BranchDisruptions>
+		<Line ID="6" Name="Piccadilly" />
+		<Status ID="PC" CssClass="DisruptedService" Description="Part Closure"
+			IsActive="true">
+			<StatusType ID="1" Description="Line" />
+		</Status>
+	</LineStatus>
+	<LineStatus ID="7" StatusDetails="">
+		<BranchDisruptions />
+		<Line ID="3" Name="Victoria" />
+		<Status ID="GS" CssClass="GoodService" Description="Good Service"
+			IsActive="true">
+			<StatusType ID="1" Description="Line" />
+		</Status>
+	</LineStatus>
+	<LineStatus ID="11"
+		StatusDetails="Train service resumes at 06:15 hrs tomorrow.">
+		<BranchDisruptions />
+		<Line ID="12" Name="Waterloo and City" />
+		<Status ID="SC" CssClass="GoodService" Description="Service Closed"
+			IsActive="true">
+			<StatusType ID="1" Description="Line" />
+		</Status>
+	</LineStatus>
+	<LineStatus ID="82"
+		StatusDetails="No service between South Tottenham and Barking, between Surrey Quays and Clapham Junction and between Queen's Park and Watford Junction due to planned engineering work. Replacement bus services are operating. No service Clapham Junction to Willesden Junction due to flooding.">
+		<BranchDisruptions>
+			<BranchDisruption>
+				<StationTo ID="269" Name="Willesden Junction" />
+				<StationFrom ID="302" Name="Clapham Junction" />
+				<Status ID="PS" CssClass="DisruptedService" Description="Part Suspended"
+					IsActive="true">
+					<StatusType ID="1" Description="Line" />
+				</Status>
+			</BranchDisruption>
+			<BranchDisruption>
+				<StationTo ID="302" Name="Clapham Junction" />
+				<StationFrom ID="227" Name="Surrey Quays" />
+				<Status ID="PC" CssClass="DisruptedService" Description="Part Closure"
+					IsActive="true">
+					<StatusType ID="1" Description="Line" />
+				</Status>
+			</BranchDisruption>
+			<BranchDisruption>
+				<StationTo ID="365" Name="Watford Junction" />
+				<StationFrom ID="183" Name="Queen's Park" />
+				<Status ID="PC" CssClass="DisruptedService" Description="Part Closure"
+					IsActive="true">
+					<StatusType ID="1" Description="Line" />
+				</Status>
+			</BranchDisruption>
+			<BranchDisruption>
+				<StationTo ID="14" Name="Barking" />
+				<StationFrom ID="355" Name="South Tottenham" />
+				<Status ID="PC" CssClass="DisruptedService" Description="Part Closure"
+					IsActive="true">
+					<StatusType ID="1" Description="Line" />
+				</Status>
+			</BranchDisruption>
+		</BranchDisruptions>
+		<Line ID="82" Name="Overground" />
+		<Status ID="PS" CssClass="DisruptedService" Description="Part Suspended"
+			IsActive="true">
+			<StatusType ID="1" Description="Line" />
+		</Status>
+	</LineStatus>
+	<LineStatus ID="81" StatusDetails="">
+		<BranchDisruptions />
+		<Line ID="81" Name="DLR" />
+		<Status ID="GS" CssClass="GoodService" Description="Good Service"
+			IsActive="true">
+			<StatusType ID="1" Description="Line" />
+		</Status>
+	</LineStatus>
+</ArrayOfLineStatus>
