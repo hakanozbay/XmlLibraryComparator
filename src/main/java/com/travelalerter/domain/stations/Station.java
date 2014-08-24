@@ -8,21 +8,21 @@ import org.simpleframework.xml.Attribute;
 public class Station {
 
 	@Attribute
-	private String id;
+	private String ID;
 	@Attribute
-	private String name;
-
+	private String Name;
+/*
 	public Station(String id, String name) {
 		this.id = id;
 		this.name = name;
 	}
-	
+	*/
 	public String getId() {
-		return id;
+		return ID;
 	}
 
 	public String getName() {
-		return name;
+		return Name;
 	}
 	
 	@Override

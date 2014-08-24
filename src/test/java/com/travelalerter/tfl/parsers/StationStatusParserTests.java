@@ -1,20 +1,20 @@
 package com.travelalerter.tfl.parsers;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import java.io.File;
 
-import org.junit.BeforeClass;
+import org.junit.Before;
 import org.junit.Test;
 
-import com.travelalerter.tfl.parsers.StationStatusParser;
 import com.travelalerter.tfl.stationstatuses.StationStatuses;
 
 public class StationStatusParserTests {
 
 	File _source;
 
-	@BeforeClass
+	@Before
 	public void setUp() throws Exception {
 		_source = new File(ClassLoader.getSystemResource("tfl/StationStatuses.xml")
 				.toURI());
