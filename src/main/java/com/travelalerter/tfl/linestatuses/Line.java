@@ -10,12 +10,12 @@ public class Line {
 	private String ID;
 	@Attribute
 	private String Name;
-	
+/*	
 	public Line(String ID, String Name) {
 		this.ID = ID;
 		this.Name = Name;
 	}
-
+*/
 	public String getId() {
 		return ID;
 	}
@@ -38,4 +38,5 @@ public class Line {
 	public String toString() {
 		return ReflectionToStringBuilder.toString(this);
 	}
+	
 }
