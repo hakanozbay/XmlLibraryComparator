@@ -3,26 +3,30 @@ package com.travelalerter.domain.stations;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.Root;
 
+@Root
 public class Station {
 
-	@Attribute
-	private String ID;
-	@Attribute
-	private String Name;
-/*
-	public Station(String id, String name) {
+	@Attribute(name="ID")
+	private String id;
+
+	@Attribute(name="Name")
+	private String name;
+
+	public Station(@Attribute(name="ID") String id, @Attribute(name="Name") String name) {
 		this.id = id;
 		this.name = name;
 	}
-	*/
+
 	public String getId() {
-		return ID;
+		return id;
 	}
 
 	public String getName() {
-		return Name;
+		return name;
 	}
 	
 	@Override
@@ -37,6 +41,6 @@ public class Station {
 	
 	@Override
 	public String toString() {
-		return ReflectionToStringBuilder.toString(this);
+		return ReflectionToStringBuilder.toString(this, ToStringStyle.SHORT_PREFIX_STYLE);
 	}
 }

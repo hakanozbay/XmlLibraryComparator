@@ -58,7 +58,7 @@
 		</Status>
 	</StationStatus>
 	<StationStatus ID="264"
-		StatusDetails="Step free access is not available to the e/b District & s/b London Overground/Southern platforms while we fix a faulty lift. Call our Travel Information Centre on 0343 222 1234 if you need help planning your journey">
+		StatusDetails="Step free access is not available to the e/b District &amp; s/b London Overground/Southern platforms while we fix a faulty lift. Call our Travel Information Centre on 0343 222 1234 if you need help planning your journey">
 		<Station ID="264" Name="Westbourne Park" />
 		<Status ID="NS" CssClass="Closed" Description="No Step Free Access"
 			IsActive="true">
