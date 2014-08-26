@@ -16,7 +16,7 @@ public class StationStatusParserTests {
 
 	@Before
 	public void setUp() throws Exception {
-		_source = new File(ClassLoader.getSystemResource("tfl/StationStatuses.xml")
+		_source = new File(ClassLoader.getSystemResource("tfl/StationStatusesv2.xml")
 				.toURI());
 	}
 	
@@ -24,7 +24,7 @@ public class StationStatusParserTests {
 	public void ParsingSampleXmlShouldReturnSevenStationStationStatuses() throws Exception{
 		StationStatuses stationStatuses = StationStatusParser.parse(_source);
 		assertNotNull(stationStatuses);
-		assertEquals(7, stationStatuses.getStationStatuses().size());
+		assertEquals(9, stationStatuses.getStationStatuses().size());
 	}
 
 	
