@@ -5,7 +5,7 @@
 			<Adjacent StationId="1" LineId="0"/>
 		</Adjacents>
 		<Lines>
-			<Line id="0" />
+			<Line ID="0" />
 		</Lines>
 	</Station>
 	<Station ID="1" Name="Oval">
@@ -22,7 +22,7 @@
 			<Adjacent StationId="1" LineId="0"/>			
 		</Adjacents>
 		<Lines>
-			<Line id="0" />
+			<Line ID="0" />
 		</Lines>
 	</Station>
 </Stations>
