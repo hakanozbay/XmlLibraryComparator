@@ -4,8 +4,6 @@ import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
 
-import com.travelalerter.tfl.stationstatuses.StatusType;
-
 public class Status {
 	@Attribute
 	private String ID;
